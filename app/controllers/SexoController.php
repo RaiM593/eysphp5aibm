@@ -5,7 +5,7 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 // En SexoController.php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/eysphp/config/database.php';
+require_once __DIR__ . '/../config/database.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/eysphp/app/models/Sexo.php';
 
 
