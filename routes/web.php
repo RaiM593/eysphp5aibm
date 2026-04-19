@@ -48,6 +48,38 @@ case 'sexo/update':
     }
     break;
 
+    case 'estadocivil':
+case 'estadocivil/index':
+    $estadoCivilController->index();
+    break;
+
+case 'estadocivil/edit':
+    if (isset($_GET['id'])) {
+        $estadoCivilController->edit($_GET['id']);
+    } else {
+        echo "Error: Falta el ID para editar.";
+    }
+    break;
+
+case 'estadocivil/eliminar':
+    if (isset($_GET['id'])) {
+        $estadoCivilController->eliminar($_GET['id']);
+    } else {
+        echo "Error: Falta el ID para eliminar.";
+    }
+    break;
+
+case 'estadocivil/delete':
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $estadoCivilController->delete();
+    }
+    break;
+
+case 'estadocivil/update':
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $estadoCivilController->update();
+    }
+    break;
 
 
     default:
